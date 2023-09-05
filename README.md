@@ -54,5 +54,8 @@ After running the code, the `/results` folder content should have the following 
 
 - `INPUT_DIR` defines the folder where the input image data is located. The image files are expected to be located in subfolders of the `INPUT_DIR`, which can be named freely by the user. Default folder path for the input directory is `./data`.
 - `RESULTS_DIR` defines the folder where the results of the functions are saved. The number and types of subfolders depends on the user's choice of outputs. Default results folder path is `./results`.
-- 
+- `CONSTRUCT_PROGRESS_IMAGES` defines whether images illustrating the functioning of the table line detection algorithm are created. Default value is `True`.
+- `CONSTRUCT_TABLE_LINE_IMAGE` defines whether images showing the detected table lines are created. Default value is `True`.
+- `CONSTRUCT_TABLE_ELEMENT_IMAGES` defines whether images showing the detected table elements are created. Default value is `True`.
+- `CONSTRUCT_TABLE_ELEMENT_CELL_POSITION_IMAGE` defines whether table element cell position analysis image is created. Default value is `True`.
 
