@@ -17,3 +17,37 @@ The code contains several functions used for detecting table lines as well as co
 `pip install -r requirements.txt`
 
 ## Running the code
+
+Image segmentation can be performed by running the `run_segment.py` file using the command line. There are a variety of parameters that can be provided as input to the code, some of which are listed below. 
+
+By default, the code expects input images to be located in subfolders of the `/data` folder, and the results are placed in subfolders of the `/results` folder. When the default folder names are used and the output is chosen to include table line images, progress images, table element images and table element cell position images, the following folder structure is expected before running the code:
+
+```
+├──Table_segmentation
+      ├──results 
+      ├──data
+      |   ├──data_folder_1
+      |   |   ├──img_1_1.jpg...
+      |   └──data_folder_2
+      |       ├──img_2_1.jpg...
+      ├──run_segment.py
+      ├──main_functions.py
+      ├──utilities.py
+      ├──requirements.txt
+      ...
+```
+After running the code, the `/results` folder content should have the following subfolders, which contain the result files:
+
+```
+├──Table_segmentation
+      ├──results 
+      |   ├──data_folder_1
+      |   |   ├──arrays
+      |   |   ├──images
+      |   |   ├──progress_images
+      |   |   └──numbers_of_table_elements.npy
+      |   └──data_folder_2
+      |       ...
+      ...
+```
+## Parameters
