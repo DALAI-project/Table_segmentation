@@ -26,9 +26,9 @@ By default, the code expects input images to be located in subfolders of the `/d
 ├──Table_segmentation
       ├──results 
       ├──data
-      |   ├──data_folder_1
+      |   ├──image_folder_1
       |   |   ├──img_1_1.jpg...
-      |   └──data_folder_2
+      |   └──image_folder_2
       |       ├──img_2_1.jpg...
       ├──run_segment.py
       ├──main_functions.py
@@ -41,13 +41,18 @@ After running the code, the `/results` folder content should have the following 
 ```
 ├──Table_segmentation
       ├──results 
-      |   ├──data_folder_1
+      |   ├──image_folder_1
       |   |   ├──arrays
       |   |   ├──images
       |   |   ├──progress_images
       |   |   └──numbers_of_table_elements.npy
-      |   └──data_folder_2
+      |   └──image_folder_2
       |       ...
       ...
 ```
 ## Parameters
+
+- `INPUT_DIR` defines the folder where the input image data is located. The image files are expected to be located in subfolders of the `INPUT_DIR`, which can be named freely by the user. Default folder path for the input directory is `./data`.
+- `RESULTS_DIR` defines the folder where the results of the functions are saved. The number and types of subfolders depends on the user's choice of outputs. Default results folder path is `./results`.
+- 
+
