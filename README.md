@@ -10,9 +10,9 @@ The documentation of the code is provided in a separate `documentation.pdf` file
 
 - Create and activate conda environment:
 
-`conda create -n table_env python=3.11`
+`conda create -n table_seg_env python=3.11`
 
-`conda activate table_env`
+`conda activate table_seg_env`
 
 - Install required libraries:
 
