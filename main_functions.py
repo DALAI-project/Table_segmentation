@@ -1,6 +1,7 @@
 # Vesa Ala-Mattila
 # Alpha Logos Software Oy
 # 31.8.2023
+# Modified by Mikko Lipsanen (6.9.2023)
 
 import numpy as np
 import cv2 as cv
