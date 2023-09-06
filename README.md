@@ -56,11 +56,14 @@ There are a variety of parameters that can be provided as input arguments to the
 
 - `INPUT_DIR` defines the folder where the input image data is located. The image files are expected to be located in subfolders of the `INPUT_DIR`, which can be named freely by the user. Default folder path for the input directory is `./data`.
 - `RESULTS_DIR` defines the folder where the results of the functions are saved. The number and types of subfolders depends on the user's choice of outputs. Default results folder path is `./results`.
-- `RUN_RANDOM_SAMPLE_TEST` defines whether random pages of random documents in the input folder are processed and the results displayed onscreen. Default value is `False`, whereby all the images belonging to all the document folders in the input folder are processed.
-- `CONSTRUCT_PROGRESS_IMAGES` defines whether images illustrating the functioning of the table line detection algorithm are created. Default value is `True`.
-- `CONSTRUCT_TABLE_LINE_IMAGE` defines whether images showing the detected table lines are created. Default value is `True`.
-- `CONSTRUCT_TABLE_ELEMENT_IMAGES` defines whether images showing the detected table elements are created. Default value is `True`.
-- `CONSTRUCT_TABLE_ELEMENT_CELL_POSITION_IMAGE` defines whether table element cell position analysis image is created. Default value is `True`.
+- `RUN_RANDOM_SAMPLE_TEST` defines whether random pages of random documents in the input folder are processed and the results displayed onscreen. Default value is `False`, whereby all the images belonging to all the document folders in the input folder are processed. If you want the value to be `True`, add `--RUN_RANDOM_SAMPLE_TEST` to the command line argument list.
+- `CONSTRUCT_PROGRESS_IMAGES` defines whether images illustrating the functioning of the table line detection algorithm are created. Default value is `True`. If you want the value to be `False`, add `--CONSTRUCT_PROGRESS_IMAGES` to the command line argument list.
+- `CONSTRUCT_TABLE_LINE_IMAGE` defines whether images showing the detected table lines are created. Default value is `True`. If you want the value to be `False`, add `--CONSTRUCT_TABLE_LINE_IMAGE` to the command line argument list.
+- `CONSTRUCT_TABLE_ELEMENT_IMAGES` defines whether images showing the detected table elements are created. Default value is `True`. If you want the value to be `False`, add `--CONSTRUCT_TABLE_ELEMENT_IMAGES` to the command line argument list.
+- `CONSTRUCT_TABLE_ELEMENT_CELL_POSITION_IMAGE` defines whether table element cell position analysis image is created. Default value is `True`. If you want the value to be `False`, add `--CONSTRUCT_TABLE_ELEMENT_CELL_POSITION_IMAGE` to the command line argument list.
 
-The following example shows how to run the code with these command line arguments (here the default values are used):
-`python run_segment.py --INPUT_DIR ./data --RESULTS_DIR ./results --RUN_RANDOM_SAMPLE_TEST False --CONSTRUCT_PROGRESS_IMAGES True --CONSTRUCT_TABLE_LINE_IMAGE True --CONSTRUCT_TABLE_ELEMENT_IMAGES True --CONSTRUCT_TABLE_ELEMENT_CELL_POSITION_IMAGE True`
+The following example shows how to run the code with the default values of the above arguments:
+`python run_segment.py`
+
+If you want for example to change input folder name to `./input` and exclude progress images from the results, type:
+`python run_segment.py --INPUT_DIR ./input --CONSTRUCT_PROGRESS_IMAGES`
