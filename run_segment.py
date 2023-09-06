@@ -17,7 +17,7 @@ parser.add_argument('--IMAGES_SAVE_SUBDIR', type=str, default='images',
                     help='Directory path for saving the result images.')
 parser.add_argument('--PROGRESS_IMAGES_SAVE_SUBDIR', type=str, default='progress_images',
                     help='Directory path for saving the progress images.')
-parser.add_argument('--RUN_RANDOM_SAMPLE_TEST', type=bool, default=False,
+parser.add_argument('--RUN_RANDOM_SAMPLE_TEST', action='store_true', 
                     help='Argument defining whether random pages of random documents are processed and the results displayed onscreen.')
 parser.add_argument('--NUM_OCTAVES', type=int, default=4,
                     help='Technical parameter for the LSDDetector class of OpenCV.')
@@ -37,17 +37,17 @@ parser.add_argument('--HORIZONTAL_RECTANGLE_LENGTH_LOWER_BOUND', type=int, defau
                     help='Argument for line detection.')
 parser.add_argument('--VERTICAL_RECTANGLE_LENGTH_LOWER_BOUND', type=int, default=1500,
                     help='Argument for line detection.')
-parser.add_argument('--CONSTRUCT_PROGRESS_IMAGES', type=bool, default=True,
+parser.add_argument('--CONSTRUCT_PROGRESS_IMAGES', action='store_false',
                     help='Argument defining whether images illustrating the functioning of the table line detection algorithm are created.')
-parser.add_argument('--CONSTRUCT_TABLE_LINE_IMAGE', type=bool, default=True,
+parser.add_argument('--CONSTRUCT_TABLE_LINE_IMAGE', action='store_false',
                     help='Argument defining whether images showing the detected table lines are created.')
 parser.add_argument('--REMOVED_LINE_THICKNESS', type=int, default=20,
                     help='Argument for table element detection.')
 parser.add_argument('--CONTOUR_THICKNESS', type=int, default=20,
                     help='Argument for table element detection.')
-parser.add_argument('--CONSTRUCT_TABLE_ELEMENT_IMAGES', type=bool, default=True,
+parser.add_argument('--CONSTRUCT_TABLE_ELEMENT_IMAGES', action='store_false',
                     help='Argument defining whether images showing the detected table elements are created.')
-parser.add_argument('--CONSTRUCT_TABLE_ELEMENT_CELL_POSITION_IMAGE', type=bool, default=True, 
+parser.add_argument('--CONSTRUCT_TABLE_ELEMENT_CELL_POSITION_IMAGE', action='store_false', 
                     help='Argument defining whether table element cell position analysis image is created.')
 
 args = parser.parse_args()
