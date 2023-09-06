@@ -54,6 +54,8 @@ def create_save_directories(logbook,
                             table_structure_detection_arguments):
     # Unpack the arguments.
     save_root_dir = save_dirs_to_create[0]
+    if not os.path.isdir(save_root_dir):
+        os.mkdir(save_root_dir)
     subdirs_to_create = save_dirs_to_create[1:]
     construct_progress_images = table_structure_detection_arguments[9]
     # We need to create logbook_save_dir and logbook_save_dir/subdir for every
