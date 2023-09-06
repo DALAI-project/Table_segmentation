@@ -2,7 +2,9 @@
 
 <img src="table_example.jpg"  width="40%" height="40%">
 
-The code, provided by [Alpha Logos Software Oy](https://www.alphalogos.fi/), contains several functions used for detecting table lines as well as content elements from tables in digitized document images. The documentation of the code is provided in a separate `documentation.pdf` file, and more detailed information on many of the functions and parameters can be found from the documentation of the [OpenCV](https://opencv.org/) library. The code has been developed specifically to detect table lines and content elements from Finnish ship logbooks from the late 19th - early 20th centuries (see example image above), and the default parameter values are optimized for that dataset. 
+The code, provided by [Alpha Logos Software Oy](https://www.alphalogos.fi/), contains several functions that can be used for detecting table lines as well as content elements from tables in digitized document images. The code has been developed specifically to detect table lines and content elements from Finnish ship logbooks from the late 19th - early 20th centuries (see example image above), and the default parameter values are optimized for that dataset. Most probably achieving good segmentation results with different datasets will require adjustment of the parameter values.
+
+The documentation of the code is provided in a separate `documentation.pdf` file, and more detailed information on many of the functions and parameters can be found from the documentation of the [OpenCV](https://opencv.org/) library. 
 
 ## Installation
 
@@ -18,7 +20,7 @@ The code, provided by [Alpha Logos Software Oy](https://www.alphalogos.fi/), con
 
 ## Running the code
 
-Image segmentation can be performed by running the `run_segment.py` file using the command line. By default, the code expects input images to be located in subfolders of the `/data` folder, and the results are placed in subfolders of the `/results` folder. When the default folder names are used and the output is chosen to include table line images, progress images, table element images and table element cell position images, the following folder structure is expected before running the code:
+Image segmentation can be performed by running the `run_segment.py` file using the command line. By default, the code expects input images to be located in subfolders of the `/data` folder, and the results are placed in subfolders of the `/results` folder. When these default folder names are used and the output is chosen to include table line images, progress images, table element images and table element cell position images, the following folder structure is expected before running the code:
 
 ```
 ├──Table_segmentation
@@ -50,14 +52,15 @@ After running the code, the `/results` folder content should have the following 
 ```
 ## Parameters
 
-There are a variety of parameters that can be provided as input to the code. The parameters are listed in the `run_segment.py` file, and explanation of the technical parameters can be found in the `documentation.pdf` file. The parameters relating to the directory paths and output files are listed below:
+There are a variety of parameters that can be provided as input arguments to the code. The arguments are listed in the `run_segment.py` file, and explanation of the technical parameters can be found in the `documentation.pdf` file. The parameters relating to the directory paths, output files and processing type are listed below:
 
 - `INPUT_DIR` defines the folder where the input image data is located. The image files are expected to be located in subfolders of the `INPUT_DIR`, which can be named freely by the user. Default folder path for the input directory is `./data`.
 - `RESULTS_DIR` defines the folder where the results of the functions are saved. The number and types of subfolders depends on the user's choice of outputs. Default results folder path is `./results`.
+- `RUN_RANDOM_SAMPLE_TEST` defines whether random pages of random documents in the input folder are processed and the results displayed onscreen. Default value is `False`, whereby all the images belonging to all the document folders in the input folder are processed.
 - `CONSTRUCT_PROGRESS_IMAGES` defines whether images illustrating the functioning of the table line detection algorithm are created. Default value is `True`.
 - `CONSTRUCT_TABLE_LINE_IMAGE` defines whether images showing the detected table lines are created. Default value is `True`.
 - `CONSTRUCT_TABLE_ELEMENT_IMAGES` defines whether images showing the detected table elements are created. Default value is `True`.
 - `CONSTRUCT_TABLE_ELEMENT_CELL_POSITION_IMAGE` defines whether table element cell position analysis image is created. Default value is `True`.
 
 The following example shows how to run the code with these command line arguments (here the default values are used):
-`python run_segment.py --INPUT_DIR ./data --RESULTS_DIR ./results --CONSTRUCT_PROGRESS_IMAGES True --CONSTRUCT_TABLE_LINE_IMAGE True --CONSTRUCT_TABLE_ELEMENT_IMAGES True --CONSTRUCT_TABLE_ELEMENT_CELL_POSITION_IMAGE True`
+`python run_segment.py --INPUT_DIR ./data --RESULTS_DIR ./results --RUN_RANDOM_SAMPLE_TEST False --CONSTRUCT_PROGRESS_IMAGES True --CONSTRUCT_TABLE_LINE_IMAGE True --CONSTRUCT_TABLE_ELEMENT_IMAGES True --CONSTRUCT_TABLE_ELEMENT_CELL_POSITION_IMAGE True`
