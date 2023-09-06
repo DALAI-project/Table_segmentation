@@ -433,7 +433,7 @@ def print_multiple_logbooks_test_times(logbook,
     images_prepared_time = times[4] - times[3]
     images_saved_time = times[5] - times[4]
     multiple_logbooks_test_times_string = (
-        'DocumentS: {} ({} / {}) \n'.format(logbook,
+        'Documents: {} ({} / {}) \n'.format(logbook,
                                           logbook_number,
                                           total_number_of_logbooks)
         + 'Image: {} / {} \n'.format(image_number, total_number_of_images)
@@ -467,7 +467,7 @@ def print_logbook_total_time(logbook_start_time):
     logbook_end_time = time.time()
     logbook_total_time = logbook_end_time - logbook_start_time
     logbook_total_time_string = (
-        'Logbook total time: {:.2f}s \n'.format(logbook_total_time)
+        'Document total time: {:.2f}s \n'.format(logbook_total_time)
     )
     print(logbook_total_time_string)
 
