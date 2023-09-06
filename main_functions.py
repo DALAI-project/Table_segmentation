@@ -194,7 +194,7 @@ def study_and_save_numbers_of_table_elements(numbers_of_table_elements,
     element_number_mean = numbers_of_table_elements[:, 1].mean()
     # Create a message and print it.
     element_number_string = (
-        'Logbook {} table element numbers: \n'.format(logbook)
+        'Document {} table element numbers: \n'.format(logbook)
         + 'Maximum: {} \n'.format(element_number_max)
         + 'Mean: {:.2f} \n'.format(element_number_mean)
     )
@@ -435,7 +435,7 @@ def print_multiple_logbooks_test_times(logbook,
     images_prepared_time = times[4] - times[3]
     images_saved_time = times[5] - times[4]
     multiple_logbooks_test_times_string = (
-        'Documents: {} ({} / {}) \n'.format(logbook,
+        'Document: {} ({} / {}) \n'.format(logbook,
                                           logbook_number,
                                           total_number_of_logbooks)
         + 'Image: {} / {} \n'.format(image_number, total_number_of_images)
