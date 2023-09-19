@@ -1,4 +1,3 @@
-
 # Vesa Ala-Mattila
 # Alpha Logos Software Oy
 # 31.8.2023
@@ -177,6 +176,12 @@ def construct_table_element_cell_position_image(image,
         )
     return table_element_cell_position_image
 
+# The following is the main function in this file. Given our discussion on both
+# the general idea behind the analysis method and the auxiliary functions (see
+# Chapter 4 of the documentation), the code should be easy to understand. In
+# order to emphasize the preliminary nature of this function, the function
+# returns only an image, i.e., more abstract objects describing the results are
+# not returned.
 
 def table_element_position_analysis(image,
                                     table_structure_and_elements_description):
