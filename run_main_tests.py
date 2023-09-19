@@ -124,7 +124,7 @@ if args.RUN_RANDOM_SAMPLE_TEST:
         data_dir
     )
 else:
-    main_functions.multiple_document_test(
+    main_functions.multiple_logbooks_test(
         table_structure_detection_arguments,
         table_element_detection_arguments,
         args.CONSTRUCT_TABLE_ELEMENT_CELL_POSITION_IMAGE,
