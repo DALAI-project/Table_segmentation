@@ -521,7 +521,7 @@ def random_sample_test(table_structure_detection_arguments,
 # auxiliary functions above, the code of the function should be easy to
 # understand.
 
-def multiple_document_test(table_structure_detection_arguments,
+def multiple_logbooks_test(table_structure_detection_arguments,
                            table_element_detection_arguments,
                            construct_table_element_cell_position_image,
                            data_dir,
