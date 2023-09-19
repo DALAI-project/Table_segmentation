@@ -4,7 +4,7 @@
 
 The code, provided by [Alpha Logos Software Oy](https://www.alphalogos.fi/), contains several functions that can be used for detecting table lines as well as content elements from tables in digitized document images. The code has been developed specifically to detect table lines and content elements from Finnish ship logbooks from the late 19th - early 20th centuries (see example images in [sample_logbook_data](https://github.com/DALAI-project/Table_segmentation/tree/main/sample_logbook_data) folder), and the default parameter values are optimized for that dataset. Most probably achieving good segmentation results with different datasets will require adjustment of the parameter values.
 
-The documentation of the code is provided in a separate [documentation.pdf](https://github.com/DALAI-project/Table_segmentation/blob/main/documentation.pdf) file, and more detailed information on many of the functions and parameters can be found from the documentation of the [OpenCV](https://opencv.org/) library. 
+The documentation of the code is provided in a separate [documentation.pdf](https://github.com/DALAI-project/Table_segmentation/blob/main/documentation.pdf) file, and images in the [example_images](https://github.com/DALAI-project/Table_segmentation/tree/main/example_images) folder illustrate the output and different processing stages of the included functions. More detailed information on many of the functions and parameters can be found from the documentation of the [OpenCV](https://opencv.org/) library. 
 
 ## Installation
 
@@ -20,7 +20,7 @@ The documentation of the code is provided in a separate [documentation.pdf](http
 
 ## Running the code
 
-Image segmentation can be performed by running the `run_main_tests.py` file using the command line. By default, the code expects input images to be located in subfolders of the `sample_logbook_data` folder, and the results are placed in subfolders of the `results` folder. When these default folder names are used and the output is chosen to include table line images, progress images, table element images and table element cell position images, the following folder structure (folder and image names used here are examples) is expected before running the code:
+Image segmentation can be performed by running the `run_main_tests.py` file using the command line. By default, the code expects input images to be located in subfolders of the `sample_logbook_data` folder, which contains examples of the ship logbooks used for developing the code. The results of the analysis are placed in subfolders of the `results` folder. When these default folder names are used and the output is chosen to include table line images, progress images, table element images and table element cell position images, the following folder structure (folder and image names used here are examples) is expected before running the code:
 
 ```
 ├──Table_segmentation
