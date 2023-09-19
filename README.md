@@ -52,7 +52,7 @@ After running the code, the `results` folder content should have the following s
 ```
 ## Parameters
 
-There are a variety of parameters that can be provided as input arguments to the code. The arguments are listed in the `run_segment.py` file, and explanation of the technical parameters can be found in the documentation.pdf](https://github.com/DALAI-project/Table_segmentation/blob/main/documentation.pdf) file. The parameters relating to the directory paths, output files and processing type are listed below:
+There are a variety of parameters that can be provided as input arguments to the code. The arguments are listed in the `run_segment.py` file, and explanation of the technical parameters can be found in the [documentation.pdf](https://github.com/DALAI-project/Table_segmentation/blob/main/documentation.pdf) file. The parameters relating to the directory paths, output files and processing type are listed below:
 
 - `INPUT_DIR` defines the folder where the input image data is located. The image files are expected to be located in subfolders of the `INPUT_DIR`, which can be named freely by the user. Default folder path for the input directory is `./sample_logbook_data`.
 - `RESULTS_DIR` defines the folder where the results of the functions are saved. The number and types of subfolders depends on the user's choice of outputs. Default results folder path is `./results`.
