@@ -8,7 +8,7 @@ import main_test_functions
 
 parser = argparse.ArgumentParser('Arguments for running table segmentation functions.')
 
-parser.add_argument('--INPUT_DIR', type=str, default='./data',
+parser.add_argument('--INPUT_DIR', type=str, default='./sample_logbook_data',
                     help='Directory path for input images.')
 parser.add_argument('--RESULTS_DIR', type=str, default='./results',
                     help='Directory path for root directory of the results of the segmentation.')
