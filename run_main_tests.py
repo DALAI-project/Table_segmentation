@@ -4,7 +4,7 @@
 # Modified by Mikko Lipsanen (6.9.2023)
 
 import argparse
-import main_functions
+import main_test_functions
 
 parser = argparse.ArgumentParser('Arguments for running table segmentation functions.')
 
@@ -117,14 +117,14 @@ result_image_file_suffixes = [
 ]
 
 if args.RUN_RANDOM_SAMPLE_TEST:
-    main_functions.random_sample_test(
+    main_test_functions.random_sample_test(
         table_structure_detection_arguments,
         table_element_detection_arguments,
         args.CONSTRUCT_TABLE_ELEMENT_CELL_POSITION_IMAGE,
         data_dir
     )
 else:
-    main_functions.multiple_logbooks_test(
+    main_test_functions.multiple_logbooks_test(
         table_structure_detection_arguments,
         table_element_detection_arguments,
         args.CONSTRUCT_TABLE_ELEMENT_CELL_POSITION_IMAGE,
